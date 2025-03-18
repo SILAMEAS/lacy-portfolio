@@ -12,8 +12,10 @@ import * as z from 'zod'
 import {toast} from "@/hooks/use-toast";
 import {ProjectDto} from "@/lib/dto/ProjectDto";
 import Link from "next/link";
-import {useUpdateProjectMutation} from "@/redux/feature/projectSlice";
+import {useDeleteProjectMutation, useUpdateProjectMutation} from "@/redux/feature/projectSlice";
 import {Loading} from "@/components/Loading";
+import {GiCancel} from "react-icons/gi";
+import {LuTrash2} from "react-icons/lu";
 
 const formSchema = z.object({
     title: z.string().min(1, 'Title is required').max(100, 'Title is too long'),
@@ -30,6 +32,7 @@ export default function CardProjectCmd({project}:{project:ProjectDto}) {
     const [file, setFile] = useState<File | null>(null);
     const [isEditing, setIsEditing] = useState(false);
     const [updateProject,update]=useUpdateProjectMutation();
+    const [deleteProject, deleteResult]=useDeleteProjectMutation()
     const { register, handleSubmit, setValue, watch,reset, formState: { errors } } = useForm<FormValues>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -78,7 +81,24 @@ export default function CardProjectCmd({project}:{project:ProjectDto}) {
         }
     }
 
-    const currentImageUrl = watch('imageUrl')
+    const currentImageUrl = watch('imageUrl');
+    const handleDeleteProject=async ()=>{
+        try {
+            await deleteProject({id:project.id}).unwrap();
+            toast({
+                title: "Delete saved successfully!",
+                description: "Your project has been deleted.",
+            });
+            setIsEditing(false);
+        } catch (error) {
+            console.error("Error submitting form:", error)
+            toast({
+                title: "Error deleting project",
+                description: "Please try again later.",
+                variant: "destructive",
+            })
+        }
+    }
 
     return (
         <Card className="w-full max-w-md mx-auto overflow-hidden h-full pb-[10px]">
@@ -140,18 +160,22 @@ export default function CardProjectCmd({project}:{project:ProjectDto}) {
                     {errors.link && <p className="text-sm text-red-500">{errors.link.message}</p>}
                 </CardContent>
                 <CardFooter className="flex justify-end space-x-2">
-                    {isEditing&&  <Button type="submit">
-                        <Save className="w-4 h-4 mr-2" />
-                        {update.isLoading? <Loading/>:'Save'}
+                    {isEditing?  <div className={'flex items-center justify-between w-[100%]'}>
+                        <LuTrash2 className="w-4 h-4 mr-2 text-red-500" onClick={handleDeleteProject}/>
+                        <Button variant={'destructive'} onClick={() => setIsEditing(false)}>
+                            <GiCancel className="w-4 h-4 mr-2" />
+                            Cancel
+                        </Button>
+                        <Button type="submit">
+                            <Save className="w-4 h-4 mr-2" />
+                            {update.isLoading? <Loading/>:'Save'}
+                        </Button>
+                    </div>:<Button onClick={() => setIsEditing(true)}>
+                        <Edit className="w-4 h-4 mr-2" />
+                        Edit
                     </Button>}
                 </CardFooter>
             </form>
-            {
-                !isEditing&& <Button onClick={() => setIsEditing(true)}>
-                    <Edit className="w-4 h-4 mr-2" />
-                    Edit
-                </Button>
-            }
         </Card>
     )
 }

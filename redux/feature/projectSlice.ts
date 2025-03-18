@@ -34,7 +34,14 @@ export const projectSlice = createApi({
             }),
             invalidatesTags: () => [{type: 'Project', id: 'ID'}]
         }),
+        deleteProject: builder.mutation<any, {id:number}>({
+            query: ({id}) => ({
+                url: `/api/project/${id}`,
+                method: Verb.Delete
+            }),
+            invalidatesTags: () => [{type: 'Project', id: 'ID'}]
+        }),
     }),
 });
 
-export const { useGetProjectsQuery ,useCreateProjectMutation,useUpdateProjectMutation} = projectSlice;
+export const { useGetProjectsQuery ,useCreateProjectMutation,useDeleteProjectMutation,useUpdateProjectMutation} = projectSlice;

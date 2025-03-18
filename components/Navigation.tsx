@@ -25,7 +25,7 @@ const Navigation = () => {
 
       return () => clearTimeout(timeout);
     }
-  }, [isRouting]);
+  }, [isRouting,path]);
   return (
     <div
       style={{ left: "0%"}}

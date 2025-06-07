@@ -10,7 +10,7 @@ import Hobbies from "@/components/cv/Hobbies";
 
 const CVPage = () => {
   return (
-    <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-8 mt-10 text-black">
+    <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-8 mt-10 text-black scroll-smooth overflow-y-auto h-screen">
       <Profile />
       <Summary />
       <Skills />

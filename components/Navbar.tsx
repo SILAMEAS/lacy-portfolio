@@ -5,9 +5,14 @@ import Link from "next/link";
 import {Skeleton} from "@/components/ui/skeleton";
 import React from "react";
 import {useGetProfileQuery} from "@/redux/feature/profileSlice";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
     const getProfile=useGetProfileQuery({});
+    const u= usePathname();
+    if(u==="/cv"){
+      return <></>
+    }
   return (
     <div className="fixed top-0 z-[40] w-full h-[100px] bg-transparent flex justify-between items-center px-5 md:px-20">
       <div className="flex flex-row gap-3 items-center">

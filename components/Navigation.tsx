@@ -6,6 +6,8 @@ import React, { useEffect, useState } from "react";
 import Transition from "./Transition";
 
 const Navigation = () => {
+  const u= usePathname();
+  console.log(u);
   const [isRouting, setisRouting] = useState(false);
   const path = usePathname();
   const [prevPath, setPrevPath] = useState("/");
@@ -26,6 +28,10 @@ const Navigation = () => {
       return () => clearTimeout(timeout);
     }
   }, [isRouting,path]);
+
+  if(u==="/cv"){
+    return <></>
+  }
   return (
     <div
       style={{ left: "0%"}}

@@ -10,6 +10,8 @@ import Languages from "@/components/cv/Languages";
 import Hobbies from "@/components/cv/Hobbies";
 import { Button } from "@/components/ui/button";
 import { Margin, usePDF } from "react-to-pdf";
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import PdfDocument from "./PdfDocument";
 
 const CVPage = () => {
   const { toPDF, targetRef } = usePDF({
@@ -37,6 +39,8 @@ const CVPage = () => {
         <div className="max-w-4xl bg-white p-8 text-black">
           <Profile />
           <Summary />
+          <br/>
+          <br/>
           <Skills />
           <Experience />
           <Education />
@@ -47,10 +51,21 @@ const CVPage = () => {
         </div>
       </div>
 
-      {/* Download Button */}
+  
       <Button onClick={()=>toPDF()} className="mb-4 fixed bottom-4 right-4">
         Download PDF
       </Button>
+
+        {/* PDF Download Button */}
+        {/* <PDFDownloadLink document={<PdfDocument />} fileName="cv.pdf" style={{ textDecoration: "none" }}>
+        {({ loading }) =>
+          loading ? (
+            <Button disabled>Preparing document...</Button>
+          ) : (
+            <Button>Download PDF</Button>
+          )
+        }
+      </PDFDownloadLink> */}
     </div>
   );
 };

@@ -12,12 +12,12 @@ const Profile = () => (
   
     <div>
       <h1 className="text-3xl font-bold">Meas Sila</h1>
-      <p className="text-blue-600">Frontend Developer | Full Stack Developer</p>
+      <p className="text-blue-600">Frontend Developer</p>
       <p>Phnom Penh, Cambodia</p>
-      <p>
-        <a href="https://sila-portfolio.vercel.app/" className="text-blue-500 hover:underline">Portfolio</a> |{" "}
-        <a href="https://github.com/SILAMEAS" className="text-blue-500 hover:underline">GitHub</a> |{" "}
-        <a href="https://kh.linkedin.com/in/meas-sila-204b1031b" className="text-blue-500 hover:underline">LinkedIn</a>
+      <p className="flex flex-col">
+        <a href="https://sila-portfolio.vercel.app/" className="text-blue-500 hover:underline">Portfolio : https://sila-portfolio.vercel.app/</a> 
+        <a href="https://github.com/SILAMEAS" className="text-blue-500 hover:underline">GitHub : https://github.com/SILAMEAS</a> 
+        <a href="https://kh.linkedin.com/in/meas-sila-204b1031b" className="text-blue-500 hover:underline">LinkedIn : https://kh.linkedin.com/in/meas-sila-204b1031b</a>
       </p>
     </div>
   </div>

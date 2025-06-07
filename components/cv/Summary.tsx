@@ -1,6 +1,6 @@
 const Summary = () => (
   <section className="mt-8">
-    <h2 className="text-xl font-semibold border-b pb-1 mb-2">Professional Summary</h2>
+    <h2 className="text-xl font-semibold border-b pb-1 mb-2">About Me</h2>
     <p>
       Passionate and motivated Frontend Developer with a Bachelor's degree in
       Computer Science from the Royal University of Phnom Penh. Skilled in

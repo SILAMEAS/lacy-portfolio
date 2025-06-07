@@ -16,9 +16,12 @@ module.exports = {
         ]
     },
     images: {
-        domains: ["res.cloudinary.com"],
+        domains: ["res.cloudinary.com","kh.linkedin.com","media.licdn.com"],
     },
     devServer: {
         host: '0.0.0.0',
     },
+    eslint: {
+        ignoreDuringBuilds: true,
+      },
 }

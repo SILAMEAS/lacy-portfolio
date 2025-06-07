@@ -18,4 +18,7 @@ module.exports = {
     images: {
         domains: ["res.cloudinary.com"],
     },
+    devServer: {
+        host: '0.0.0.0',
+    },
 }

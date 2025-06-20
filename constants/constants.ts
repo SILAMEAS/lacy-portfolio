@@ -1,4 +1,5 @@
 import { RxDashboard, RxHome, RxPerson } from "react-icons/rx";
+import { TbFileCv } from "react-icons/tb";
 
 export const SkillData = [
   {
@@ -197,9 +198,9 @@ export const NavLinks = [
     icon: RxDashboard,
     link: "/my-projects",
   },
-  // {
-  //   name: "/contact-me",
-  //   icon: RxClipboard,
-  //   link: "/contact-me",
-  // },
+  {
+    name: "/cv",
+    icon: TbFileCv ,
+    link: "/cv",
+  },
 ];

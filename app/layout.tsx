@@ -34,9 +34,11 @@ export default function RootLayout({
       >
           <App>
               <ModalProvider/>
-        <Navbar />
+       <div className='h-screen overflow-hidden'>
+         <Navbar />
           {children}
           <Toaster />
+       </div>
         <Navigation />
           </App>
       </ThemeProvider>

@@ -99,7 +99,7 @@ export default function GitHubProfile() {
     }
 
     return (
-        <Card className="w-full max-w-4xl mx-auto shadow-lg max-h-[80%] overflow-y-auto">
+        <Card className="w-full max-w-4xl mx-auto shadow-lg max-h-[80%] overflow-y-auto bg-inherit">
             <CardHeader className="pb-2">
                 <div className="flex flex-col md:flex-row gap-6 items-start md:items-center">
                     <Avatar className="h-24 w-24 border-4 border-background shadow-md">

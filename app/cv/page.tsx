@@ -20,7 +20,7 @@ const CVPage = () => {
   });
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen ">
+    <div className="flex flex-col items-center justify-center h-screen w-full p-5">
       {/* Preview Section */}
       <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-8 mt-10 text-black max-h-[calc(100vh-100px)] overflow-y-auto">
         <Profile />

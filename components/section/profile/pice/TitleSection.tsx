@@ -11,7 +11,7 @@ const TitleSection = ({profile}:{profile?: ProfileDto}) => {
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500 text-[18px] md:text-[50px] lg:text-[50px]">
             {` ${profile?.mainTitle}`}
                         </span>
-        <Edit
+        {/* <Edit
             onClick={() =>{
                 dispatch(onOpen({ type: 'modify-profile', data: { profile } }));
             }
@@ -19,7 +19,7 @@ const TitleSection = ({profile}:{profile?: ProfileDto}) => {
             className={
                 "text-zinc-300 inline z-100 cursor-pointer ml-[10px]"
             }
-        />
+        /> */}
         {/*<ToggleThem/>*/}
     </h1>
 };

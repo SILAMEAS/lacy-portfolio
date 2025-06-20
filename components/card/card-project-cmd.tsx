@@ -101,7 +101,7 @@ export default function CardProjectCmd({project}:{project:ProjectDto}) {
     }
 
     return (
-        <Card className="w-full max-w-md mx-auto overflow-hidden h-full pb-[10px]">
+        <Card className="w-full max-w-md mx-auto overflow-hidden max-h-[400px] pb-[10px]">
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="relative w-full h-48">
                     <Image
@@ -159,7 +159,7 @@ export default function CardProjectCmd({project}:{project:ProjectDto}) {
                     )}
                     {errors.link && <p className="text-sm text-red-500">{errors.link.message}</p>}
                 </CardContent>
-                <CardFooter className="flex justify-end space-x-2">
+                {/* <CardFooter className="flex justify-end space-x-2">
                     {isEditing?  <div className={'flex items-center justify-between w-[100%]'}>
                         <LuTrash2 className="w-4 h-4 mr-2 text-red-500" onClick={handleDeleteProject}/>
                         <Button variant={'destructive'} onClick={() => setIsEditing(false)}>
@@ -174,7 +174,7 @@ export default function CardProjectCmd({project}:{project:ProjectDto}) {
                         <Edit className="w-4 h-4 mr-2" />
                         Edit
                     </Button>}
-                </CardFooter>
+                </CardFooter> */}
             </form>
         </Card>
     )

@@ -7,19 +7,14 @@ import {Loading} from "@/components/Loading";
 
 const LayoutCardListProject = () => {
     const getProjects=useGetProjectsQuery({});
-    return <Carousel className="w-full max-w-xs">
-        <p className={'my-[2rem] font-bold text-2xl text-red-300'}>{`${getProjects?.currentData?.length} projects`}</p>
-        <CarouselContent>
-            {getProjects.isLoading ? <Loading/> :
+    return <div className='h-full w-full'>
+         <div className='container my-[100px] flex flex-wrap-reverse overflow-hidden overflow-y-auto h-[80%] gap-4 p-5 mx-auto'>
+             {getProjects.isLoading ? <Loading/> :
                 getProjects?.currentData?.map((project, index) => (
-                    <CarouselItem key={index}>
-                        <CardProjectCmd project={project}/>
-                    </CarouselItem>
+                  <CardProjectCmd project={project}/>
                 ))}
-        </CarouselContent>
-        <CarouselPrevious/>
-        <CarouselNext/>
-    </Carousel>
+         </div>
+    </div>
 };
 
 export default LayoutCardListProject;

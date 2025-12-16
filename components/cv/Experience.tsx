@@ -2,8 +2,10 @@ const experiences = [
   {
     title: "Frontend Developer - ALLWEB Company IT (2022–Present)",
     details: [
-      "Developed frontend UI for business and e-commerce websites",
-      "Integrated REST APIs and managed UI state using Redux Toolkit",
+      "Developed frontend UI for signature websites",
+      "Integrated REST APIs and managed UI state management",
+      "Optimzed junk file make performace of website better",
+      "Responsive website with MUI"
     ],
   },
   {
@@ -11,6 +13,7 @@ const experiences = [
     details: [
       "Learned basic web development and contributed to internal tools",
       "Built small projects with HTML, CSS, and JavaScript",
+      "Built small projects with C++ OOP",
     ],
   },
   {

@@ -201,6 +201,6 @@ export const NavLinks = [
   {
     name: "/cv",
     icon: TbFileCv ,
-    link: "/cv",
+    link: "https://flowcv.com/resume/s9ge49ptke54",
   },
 ];

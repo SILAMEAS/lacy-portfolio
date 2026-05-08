@@ -1,17 +1,17 @@
-"use client";
 import React from "react";
 import "swiper/css";
-import GitHubProfile from "@/components/github-profile/GitHubProfile";
+import SkillComponent from "@/components/card/skillComponent";
 
 const Page = () => {
-  return (
-    <div
-      style={{ backgroundImage: "url(/bg-2.jpg)" }}
-      className="h-screen w-screen flex items-center justify-center bg-cover bg-center overflow-hidden"
-    >
-      <GitHubProfile/>
-    </div>
-  );
+
+    return (
+        <div
+            style={{backgroundImage: "url(/bg-2.jpg)"}}
+            className="h-screen w-screen flex items-center justify-center bg-cover bg-center"
+        >
+            <SkillComponent/>
+        </div>
+    );
 };
 
 export default Page;

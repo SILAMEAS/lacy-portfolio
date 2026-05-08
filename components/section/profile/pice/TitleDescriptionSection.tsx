@@ -4,7 +4,7 @@ import DescriptionSection from "@/components/section/profile/pice/DescriptionSec
 import CoupleButtonSection from "@/components/section/profile/pice/CoupleButtonSection";
 import {ProfileDto} from "@/lib/dto/ProfileDto";
 
-const TitleDescriptionSection = ({profile}:{profile?: ProfileDto}) => {
+const TitleDescriptionSection = ({profile}: { profile?: ProfileDto }) => {
     return <div
         className="pl-5 md:lg:pl-20 md:pl-20 pb-56 md:pb-20 flex flex-col gap-5 z-[10] max-w-[750px]">
         <TitleSection profile={profile}/>

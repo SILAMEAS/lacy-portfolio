@@ -1,5 +1,8 @@
 import { RxDashboard, RxHome, RxPerson } from "react-icons/rx";
 import { TbFileCv } from "react-icons/tb";
+import {GiSkills} from "react-icons/gi";
+import {AiFillTool} from "react-icons/ai";
+import {SettingsIcon} from "lucide-react";
 
 export const SkillData = [
   {
@@ -190,7 +193,7 @@ export const NavLinks = [
   },
   {
     name: "/my-skills",
-    icon: RxPerson,
+    icon: SettingsIcon,
     link: "/my-skills",
   },
   {
@@ -198,9 +201,9 @@ export const NavLinks = [
     icon: RxDashboard,
     link: "/my-projects",
   },
-  {
-    name: "/cv",
-    icon: TbFileCv ,
-    link: "https://flowcv.com/resume/s9ge49ptke54",
-  },
+  // {
+  //   name: "/cv",
+  //   icon: TbFileCv ,
+  //   link: "https://flowcv.com/resume/s9ge49ptke54",
+  // },
 ];

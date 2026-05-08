@@ -27,7 +27,6 @@ import {
     TailwindLogo,
     TypeOrmLogo,
     TypeScriptLogo,
-    UploadthingLogo,
     VercelLogo,
 } from "@/components/TechLogo";
 import {SiJira, SiKoyeb, SiMysql, SiNestjs, SiPrisma, SiRailway, SiStrapi, SiSwagger, SiVite} from "react-icons/si";
@@ -41,8 +40,8 @@ import {MdHtml, MdOutlineRollerShadesClosed} from "react-icons/md";
 import {RiCodeSSlashFill} from "react-icons/ri";
 import {AiFillTool} from "react-icons/ai";
 import {BsTrello} from "react-icons/bs";
-import {PiTreeStructure} from "react-icons/pi";
-import {GiCircleClaws} from "react-icons/gi";
+import {PiSoundcloudLogoThin, PiTreeStructure} from "react-icons/pi";
+import {GiCircleClaws, GiSadCrab} from "react-icons/gi";
 
 const skills = [
     {
@@ -104,9 +103,9 @@ const skills = [
         items: [
             {name: "MongoDB", icon: <MongoDBLogo/>},
             {name: "Cloudinary", icon: <Cloud className="w-4 h-4"/>},
-            {name: "Uploadthing", icon: <UploadthingLogo className="w-4 h-4"/>},
+            {name: "Uploadthing", icon: <PiSoundcloudLogoThin className="w-4 h-4"/>},
             {name: "Postgres", icon: <DiPostgresql/>},
-            {name: "MySql", icon: <SiMysql className="w-4 h-4"/>},
+            {name: "MySql", icon: <SiMysql className="w-4 h-4"/>}
         ],
     },
     {
@@ -121,7 +120,9 @@ const skills = [
             {name: "Swagger", icon: <SiSwagger className="w-4 h-4"/>},
             {name: "Drawio", icon: <PiTreeStructure className="w-4 h-4 rotate-90"/>},
             {name: "Trello", icon: <BsTrello className="w-4 h-4"/>},
-            {name: "Jira", icon: <SiJira className="w-4 h-4"/>}
+            {name: "Jira", icon: <SiJira className="w-4 h-4"/>},
+            {name: "Neon", icon: <>N</>},
+            {name: "Aiven", icon: <GiSadCrab className="w-4 h-4"/>},
         ],
     },
     {

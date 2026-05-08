@@ -1,9 +1,20 @@
 "use client"
-import {Brain, Cloud, Code2, Database, Layout, MessageSquare, Server, SettingsIcon, Users, Wrench,} from "lucide-react";
+import {
+    Brain,
+    Cloud,
+    Code2,
+    Database,
+    Layout,
+    LucideTreePalm,
+    MessageSquare,
+    Server,
+    SettingsIcon,
+    Users,
+    Wrench,
+} from "lucide-react";
 import {ScrollAnimation} from "@/components/ScrollAnimation";
 import {
     AppwriteLogo,
-    ConvexLogo,
     ExpressLogo,
     GitLogo,
     JavaScriptLogo,
@@ -19,17 +30,32 @@ import {
     UploadthingLogo,
     VercelLogo,
 } from "@/components/TechLogo";
-import {SiKoyeb, SiMysql, SiNestjs, SiPrisma, SiRailway, SiStrapi} from "react-icons/si";
-import {BiLogoSpringBoot} from "react-icons/bi";
+import {SiJira, SiKoyeb, SiMysql, SiNestjs, SiPrisma, SiRailway, SiStrapi, SiSwagger, SiVite} from "react-icons/si";
+import {BiLogoRedux, BiLogoSpringBoot} from "react-icons/bi";
 import {DiDjango, DiPostgresql} from "react-icons/di";
 import {IoLogoVue} from "react-icons/io5";
 import {TbBrandNuxt} from "react-icons/tb";
-import {CgCPlusPlus, CgDesignmodo} from "react-icons/cg";
+import {CgCircleci, CgCPlusPlus, CgDesignmodo} from "react-icons/cg";
 import {FaJava} from "react-icons/fa";
 import {MdHtml, MdOutlineRollerShadesClosed} from "react-icons/md";
 import {RiCodeSSlashFill} from "react-icons/ri";
+import {AiFillTool} from "react-icons/ai";
+import {BsTrello} from "react-icons/bs";
+import {PiTreeStructure} from "react-icons/pi";
+import {GiCircleClaws} from "react-icons/gi";
 
 const skills = [
+    {
+        category: "Top Skill",
+        icon: <Code2 className="w-6 h-6"/>,
+        items: [
+            {name: "TypeScript", icon: <TypeScriptLogo/>},
+            {name: "React.js", icon: <ReactLogo className="w-4 h-4"/>},
+            {name: "Next.js", icon: <NextjsLogo className="w-4 h-4"/>},
+            {name: "SpringBoot", icon: <BiLogoSpringBoot/>},
+            {name: "Nest.Js", icon: <SiNestjs/>},
+        ],
+    },
     {
         category: "Programming Languages",
         icon: <Code2 className="w-6 h-6"/>,
@@ -45,10 +71,20 @@ const skills = [
         icon: <Layout className="w-6 h-6"/>,
         items: [
             {name: "HTML", icon: <MdHtml/>},
-            {name: "React.js", icon: <ReactLogo/>},
-            {name: "Next.js", icon: <NextjsLogo/>},
-            {name: "Vue.js", icon: <IoLogoVue/>},
-            {name: "Nuxt.js", icon: <TbBrandNuxt/>}
+            {name: "React.js", icon: <ReactLogo className="w-4 h-4"/>},
+            {name: "Next.js", icon: <NextjsLogo className="w-4 h-4"/>},
+            {name: "Vue.js", icon: <IoLogoVue className="w-4 h-4"/>},
+            {name: "Nuxt.js", icon: <TbBrandNuxt className="w-4 h-4"/>}
+        ],
+    },
+    {
+        category: "Style & Design",
+        icon: <CgDesignmodo className="w-6 h-6"/>,
+        items: [
+            {name: "CSS", icon: <RiCodeSSlashFill/>},
+            {name: "Shadcn", icon: <MdOutlineRollerShadesClosed className="w-4 h-4"/>},
+            {name: "MUI", icon: <MUILogo/>},
+            {name: "Tailwind", icon: <TailwindLogo/>}
         ],
     },
     {
@@ -74,6 +110,21 @@ const skills = [
         ],
     },
     {
+        category: "Tools & third-Party Libraries",
+        icon: <AiFillTool className="w-6 h-6"/>,
+        items: [
+            {name: "Vite", icon: <SiVite className="w-4 h-4"/>},
+            {name: "Redux", icon: <BiLogoRedux className="w-4 h-4"/>},
+            {name: "TanStack", icon: <LucideTreePalm className="w-4 h-4"/>},
+            {name: "Clerk", icon: <CgCircleci className="w-4 h-4 "/>},
+            {name: "Kinde", icon: <>K</>},
+            {name: "Swagger", icon: <SiSwagger className="w-4 h-4"/>},
+            {name: "Drawio", icon: <PiTreeStructure className="w-4 h-4 rotate-90"/>},
+            {name: "Trello", icon: <BsTrello className="w-4 h-4"/>},
+            {name: "Jira", icon: <SiJira className="w-4 h-4"/>}
+        ],
+    },
+    {
         category: "Version Control & DevOps",
         icon: <GitLogo/>,
         items: [
@@ -86,22 +137,12 @@ const skills = [
         ],
     },
     {
-        category: "Style & Design",
-        icon: <CgDesignmodo className="w-6 h-6"/>,
-        items: [
-            {name: "CSS", icon: <RiCodeSSlashFill/>},
-            {name: "Shadcn", icon: <MdOutlineRollerShadesClosed className="w-4 h-4"/>},
-            {name: "MUI", icon: <MUILogo/>},
-            {name: "Tailwind", icon: <TailwindLogo/>}
-        ],
-    },
-    {
         category: "Api Integration & Design & Backend platform",
         icon: <CgDesignmodo className="w-6 h-6"/>,
         items: [
             {name: "Strapi", icon: <SiStrapi/>},
             {name: "Appwrite", icon: <AppwriteLogo/>},
-            {name: "Convex", icon: <ConvexLogo/>},
+            {name: "Convex", icon: <GiCircleClaws/>},
 
         ],
     },

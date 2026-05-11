@@ -17,6 +17,15 @@ const CoupleButtonSection = () => {
                 className="absolute rounded-[20px] z-[1] bg-white inset-0 opacity-0 group-hver:opacity-20"/>
             My projects
         </Link>
+
+        <Link
+            href="https://flowcv.com/resume/s9ge49ptke54"
+            className="rounded-[20px] group relative bg-trasparent px-5 underline border-white py-3 text-sm md:text-lg text-blue-500 max-w-[120px] md:max-w-[200px] lg:max-w-[200px]"
+        >
+            <div
+                className="absolute rounded-[20px] z-[1] bg-white inset-0 opacity-0 group-hver:opacity-20"/>
+            preview cv
+        </Link>
     </div>
 };
 
